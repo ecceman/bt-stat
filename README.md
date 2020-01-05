@@ -2,9 +2,9 @@
 Polybar bluetooth module. 
 
 ## Installation/usage
-1. Make sure bluetoothctl is installed
+1. Make sure bluetoothctl and Python >= 3.3 is installed
 2. Download python script and modify the (list of) MAC addresses for bluetooth devices to fit your own stuff. 
-3. Create polybar code
+3. Create polybar config
 ```
 [module/bluetooth]
 type = custom/script
