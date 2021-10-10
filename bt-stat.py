@@ -35,6 +35,9 @@ def main(argv):
                 cmd_bt_connected = 'bluetoothctl info ' + mac + ' | grep -i connected | awk \'{print $2}\''
                 t = subprocess.Popen([cmd_bt_connected], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
                 bt_connected = t.stdout.read().decode('utf-8').strip('\n')
+                if bt_connected == "":
+                    print("{} is not connected".format(name))
+                    exit()
                 if bt_connected == "yes":
                     print(name)
                     break
